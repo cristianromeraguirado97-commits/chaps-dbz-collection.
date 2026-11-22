@@ -1,20 +1,19 @@
-# CHAPS DBZ COLLECTION · V6
+# CHAPS DBZ COLLECTION · V7 (prueba)
 
-Versión PWA instalable con ambientación visual global con movimiento y temas atmosféricos para iPhone.
+Actualización visual de la PWA, manteniendo la clave de datos `chapsDbzCollection_v1` y las preferencias existentes.
 
-## Incluye
-- Portada cinematográfica con arte de Shenron ya incluido en el proyecto.
-- Panel de colección con progreso real sobre 57 espacios de la primera tanda.
-- Accesos visuales a colección, catálogo de referencia, compras, mercado, packs, repetidos, ventas y estadísticas.
-- Catálogo personal con fichas editables y fotografía propia de cada Chap.
-- Seis temas visuales con ambientación global y preferencias de animación Normal, Suave y Desactivadas.
-- Exportación e importación manual de copia JSON.
+## Novedades
+- Pantalla de entrada cinematográfica con Shenron.
+- Primer acceso: creación y confirmación de código personal de 9 cifras.
+- Acceso posterior mediante código; cambio del código desde Ajustes.
+- Hash local PBKDF2-SHA-256 con sal aleatoria.
+- Transición animada hacia la aplicación y ambientes de color por tema.
+- Preferencias de movimiento conservadas.
 
-## Importante
-- No se inventan números, personajes ni fotografías de Chaps. Las fichas se completan con fotos reales.
-- Los datos y fotografías se guardan localmente en el navegador de este dispositivo. La nube privada, PIN/Face ID y sincronización entre dispositivos aún no están conectados.
-- Compras, mercado, packs y ventas siguen siendo pantallas preparadas; sus formularios y cálculos se desarrollarán en una fase posterior. Los temas usan la ilustración Shenron disponible con tratamientos atmosféricos de color; aún no incluyen ilustraciones individuales animadas de cada personaje.
-- Mantiene la clave local de datos `chapsDbzCollection_v1` para conservar fichas de la versión anterior en el mismo navegador.
+## Importante sobre seguridad
+El código es una barrera de acceso local de la interfaz, no cifrado del contenido ni autenticación de servidor. Los datos siguen en el almacenamiento local del navegador. No es protección frente a alguien con acceso técnico al dispositivo o al almacenamiento del navegador. No olvides exportar copias de seguridad.
 
-## Publicación
-Sube el contenido de esta carpeta a la raíz del repositorio GitHub Pages, reemplazando los archivos existentes.
+## Compatibilidad y actualización
+PWA web para iPhone (no es APK). Sube los seis archivos a la raíz de GitHub Pages sustituyendo los anteriores. La clave de datos se mantiene para no reinicializar la colección.
+
+Los personajes animados específicos de cada universo son una fase gráfica posterior: esta prueba implementa la entrada de Shenron, la barrera de código y los ambientes cromáticos; no simula animaciones de personajes que aún no se han creado.
