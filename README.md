@@ -1,12 +1,16 @@
-# CHAPS DBZ COLLECTION · V3
+# CHAPS DBZ COLLECTION · V4
 
-Versión PWA instalable con portada Shenron, siete bolas de dragón animadas, barrido de energía y transiciones suaves. Mantiene el catálogo, ajustes visuales y copia/importación local de la versión anterior.
+Rediseño visual inspirado en la referencia elegida: estética Dragon Ball de coleccionista, fondos oscuros, energía naranja y dorado, cuadrícula de accesos rápidos y catálogo centrado en fotografías reales de los Chaps Matutano.
 
-## Actualizar GitHub Pages desde iPhone
-1. Abre el repositorio `chaps-dbz-collection` en GitHub.
-2. Pulsa **Add file** → **Upload files**.
-3. Sube los seis archivos de esta carpeta a la raíz del repositorio y acepta reemplazar los existentes.
-4. En **Commit changes**, deja seleccionada la rama `main` y confirma.
-5. Espera a que GitHub Pages termine el despliegue y recarga la app en Safari.
+## Publicación
+Sube el contenido de esta carpeta a la raíz del repositorio GitHub Pages, reemplazando los archivos existentes. Mantén `index.html`, `manifest.webmanifest`, `sw.js`, `icon.svg` y `shenron-cover.png` en la raíz.
 
-No subas fotos privadas de tu colección ni copias JSON al repositorio público. Los datos de la app se guardan localmente en el navegador.
+## Estado
+- Navegación y accesos rápidos funcionales.
+- Catálogo con fichas manuales, foto real, tanda, cantidad y conservación.
+- Ficha individual, edición y eliminación.
+- Exportación e importación JSON local.
+- Módulos de compras, mercado, packs, ventas y estadísticas preparados visualmente; los flujos económicos se implementarán después.
+- Datos locales en el navegador; no hay sincronización privada en la nube ni autenticación todavía.
+
+No contiene un catálogo ficticio: los diseños y números deben añadirse a partir de piezas verificadas.
