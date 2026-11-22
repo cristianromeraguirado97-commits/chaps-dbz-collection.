@@ -1,19 +1,26 @@
-# CHAPS DBZ COLLECTION · V7 (prueba)
+# CHAPS DBZ COLLECTION — V9 (revisión visual)
 
-Actualización visual de la PWA, manteniendo la clave de datos `chapsDbzCollection_v1` y las preferencias existentes.
+Esta versión conserva las claves de almacenamiento local existentes de V7/V8 (`chapsDbzCollection_v1`, `chapsDbzVisualPrefs_v1` y la clave de acceso), así como las funciones y pantallas existentes.
 
-## Novedades
-- Pantalla de entrada cinematográfica con Shenron.
-- Primer acceso: creación y confirmación de código personal de 9 cifras.
-- Acceso posterior mediante código; cambio del código desde Ajustes.
-- Hash local PBKDF2-SHA-256 con sal aleatoria.
-- Transición animada hacia la aplicación y ambientes de color por tema.
-- Preferencias de movimiento conservadas.
+## Cambios de esta revisión
+- Se mantiene el paisaje panorámico de Dragon Ball como ambientación base.
+- Se añade una ilustración panorámica de Goku para el tema Goku.
+- Los siete temas tienen paletas y atmósferas diferenciadas y una línea de personajes/evoluciones propia.
+- Se mantienen los controles de animación normal, suave y desactivada.
+- Se actualiza la caché del service worker a `chaps-dbz-v9`.
+- No se modifica el catálogo oficial ni se añaden diseños de Chaps inventados.
+- No se modifica `icon.svg` ni el manifiesto: el logo/icono exterior se trabajará en la siguiente fase.
 
-## Importante sobre seguridad
-El código es una barrera de acceso local de la interfaz, no cifrado del contenido ni autenticación de servidor. Los datos siguen en el almacenamiento local del navegador. No es protección frente a alguien con acceso técnico al dispositivo o al almacenamiento del navegador. No olvides exportar copias de seguridad.
+## Publicación
+Subir los archivos de esta carpeta a la raíz del repositorio, sustituyendo los archivos con el mismo nombre. No borrar los datos del navegador ni limpiar el almacenamiento local.
 
-## Compatibilidad y actualización
-PWA web para iPhone (no es APK). Sube los seis archivos a la raíz de GitHub Pages sustituyendo los anteriores. La clave de datos se mantiene para no reinicializar la colección.
+**Nota de alcance:** esta revisión es una primera pasada de ambientación: Goku tiene ilustración propia; los otros seis temas se diferencian mediante atmósfera, paleta y textos de evolución. Las ilustraciones panorámicas específicas de Trunks, Vegeta, Krillin/A-18, Gotenks, Gogeta/Vegetto y villanos quedan pendientes de aprobación visual antes de considerar cerrada la estética.
 
-Los personajes animados específicos de cada universo son una fase gráfica posterior: esta prueba implementa la entrada de Shenron, la barrera de código y los ambientes cromáticos; no simula animaciones de personajes que aún no se han creado.
+
+## V10 · fondos aprobados
+- Integra fondos panorámicos aprobados para Goku, Trunks, Vegeta, Krillin y Android 18, Gotenks, Gogeta y Vegetto.
+- El tema de villanos rota automáticamente entre Freezer, Cell, Broly clásico, Super 17, Omega Shenron y Piccolo.
+- La rotación se detiene con animaciones desactivadas y se ralentiza en modo suave.
+- Se mantienen las claves locales `chapsDbzCollection_v1`, `chapsDbzVisualPrefs_v1` y `chapsDbzAccess_v1`.
+- Baby Vegeta permanece en la descripción del tema, pero su ilustración aprobada no estaba disponible entre los archivos de trabajo para incluirla en esta compilación.
+- No se han añadido ni modificado chapas del catálogo.
