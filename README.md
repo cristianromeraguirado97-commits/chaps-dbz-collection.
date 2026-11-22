@@ -1,7 +1,12 @@
-# CHAPS DBZ COLLECTION — MVP instalable
+# CHAPS DBZ COLLECTION · V3
 
-Incluye catálogo por tandas, fichas editables, foto desde cámara/galería, cantidad, conservación, filtros y copia manual JSON. Los datos se guardan localmente en el navegador.
+Versión PWA instalable con portada Shenron, siete bolas de dragón animadas, barrido de energía y transiciones suaves. Mantiene el catálogo, ajustes visuales y copia/importación local de la versión anterior.
 
-Para instalar en iPhone: publica todos los archivos en un hosting HTTPS, abre la URL en Safari y usa Compartir > Añadir a pantalla de inicio.
+## Actualizar GitHub Pages desde iPhone
+1. Abre el repositorio `chaps-dbz-collection` en GitHub.
+2. Pulsa **Add file** → **Upload files**.
+3. Sube los seis archivos de esta carpeta a la raíz del repositorio y acepta reemplazar los existentes.
+4. En **Commit changes**, deja seleccionada la rama `main` y confirma.
+5. Espera a que GitHub Pages termine el despliegue y recarga la app en Safari.
 
-Limitaciones actuales: no hay nube automática, cuenta/clave, Face ID, compras/ventas funcionales ni App Store. Esas funciones requieren backend/desarrollo adicional. La primera tanda 57/57 es solo la referencia indicada por el usuario; no se han precargado números ni diseños.
+No subas fotos privadas de tu colección ni copias JSON al repositorio público. Los datos de la app se guardan localmente en el navegador.

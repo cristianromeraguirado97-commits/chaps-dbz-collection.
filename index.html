@@ -17,11 +17,30 @@
 body[data-theme="super-saiyan"]{--gold:#ffe16b;--orange:#ff9b20;--line:#66502c}body[data-theme="gt"]{--gold:#f4a45e;--orange:#c65b37;--line:#5a3540}body[data-theme="trunks"]{--gold:#c8a6ff;--orange:#e16b9a;--line:#49375f}body[data-theme="gotenks"]{--gold:#83e7ff;--orange:#b18aff;--line:#34566b}body[data-theme="gogeta"]{--gold:#ffcb73;--orange:#e95d57;--line:#69433a}
 body.no-motion *,body.no-motion *:before,body.no-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 .theme-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}.theme-controls .field{margin:0}.settings-intro{font-size:12px;line-height:1.5;color:var(--muted)}
+/* V3 · Dragon Balls and ki energy motion */
+.hero{background-position:center 28%;}
+.hero:before{content:"";position:absolute;inset:-35%;z-index:-1;pointer-events:none;background:linear-gradient(112deg,transparent 38%,rgba(255,220,130,.10) 47%,rgba(255,255,255,.18) 50%,rgba(255,170,55,.10) 53%,transparent 62%);transform:translateX(-65%) rotate(8deg);animation:kiSweep 8s ease-in-out infinite}
+.hero .dragon-orbs{position:absolute;inset:0;pointer-events:none;z-index:0}
+.dragon-orbs i{position:absolute;width:clamp(17px,4vw,27px);aspect-ratio:1;border-radius:50%;border:1px solid #ffe39a;background:radial-gradient(circle at 34% 28%,#fff4b5 0 8%,#ffb52f 35%,#c94b12 76%,#64200d);box-shadow:0 0 10px #ff9d2eaa,0 0 24px #ff9d2e55;opacity:.88;animation:dragonFloat 5s ease-in-out infinite,dragonGlow 2.8s ease-in-out infinite}
+.dragon-orbs i:after{content:"★";position:absolute;inset:0;display:grid;place-items:center;color:#8e2c0c;font-size:clamp(8px,1.8vw,12px);text-shadow:0 1px 2px #ffd66a}
+.dragon-orbs i:nth-child(1){left:8%;top:19%;animation-delay:-.8s}.dragon-orbs i:nth-child(2){left:27%;top:8%;animation-delay:-2s}.dragon-orbs i:nth-child(3){right:27%;top:13%;animation-delay:-1.3s}.dragon-orbs i:nth-child(4){right:8%;top:32%;animation-delay:-2.8s}.dragon-orbs i:nth-child(5){left:17%;top:48%;animation-delay:-3.5s}.dragon-orbs i:nth-child(6){right:18%;top:56%;animation-delay:-1.8s}.dragon-orbs i:nth-child(7){left:48%;top:37%;animation-delay:-.3s}
+.hero .eyebrow,.hero h2,.hero p{z-index:1}
+main:not(.hidden){animation:pageIn .32s ease both}
+@keyframes kiSweep{0%,22%{transform:translateX(-65%) rotate(8deg);opacity:0}38%{opacity:1}68%,100%{transform:translateX(65%) rotate(8deg);opacity:0}}
+@keyframes dragonFloat{0%,100%{translate:0 0}50%{translate:0 -9px}}
+@keyframes dragonGlow{0%,100%{filter:brightness(.88);box-shadow:0 0 8px #ff9d2e77,0 0 16px #ff9d2e33}50%{filter:brightness(1.3);box-shadow:0 0 15px #ffdf77dd,0 0 30px #ff9d2e88}}
+@keyframes pageIn{from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+body[data-theme="super-saiyan"] .hero:before{background:linear-gradient(112deg,transparent 38%,rgba(255,245,130,.16) 50%,transparent 62%)}
+body[data-theme="gt"] .dragon-orbs i{filter:hue-rotate(-12deg)}
+body[data-theme="trunks"] .dragon-orbs i{filter:hue-rotate(38deg)}
+body[data-theme="gotenks"] .dragon-orbs i{filter:hue-rotate(125deg)}
+body[data-theme="gogeta"] .dragon-orbs i{filter:hue-rotate(-25deg)}
+
 @media(min-width:600px){.hero{min-height:430px}.hero h2{margin-top:190px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style></head><body><div class="app">
 <header><div class="brand"><div class="orb">★</div><div><h1>CHAPS DBZ COLLECTION</h1><small>MATUTANO · ARCHIVE</small></div></div><button class="icon" onclick="go('settings')">⚙</button></header>
-<main id="home"><section class="hero"><div class="eyebrow">✦ TU COLECCIÓN · TU HISTORIA ✦</div><h2>El poder de las siete estrellas.</h2><p>Tu archivo personal de Chaps Matutano. Cada pieza cuenta una historia.</p></section>
+<main id="home"><section class="hero"><div class="dragon-orbs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="eyebrow">✦ TU COLECCIÓN · TU HISTORIA ✦</div><h2>El poder de las siete estrellas.</h2><p>Tu archivo personal de Chaps Matutano. Cada pieza cuenta una historia.</p></section>
 <div class="stats"><div class="stat"><strong id="units">0</strong><span>UNIDADES</span></div><div class="stat"><strong id="models">0</strong><span>MODELOS</span></div><div class="stat"><strong id="dupes">0</strong><span>DUPLICADAS</span></div></div>
 <div class="head"><h3>Tu archivo</h3><span class="tiny" id="progress">0 de 57 fichas</span></div><div class="panel"><div class="row"><div><div class="eyebrow">PRIMERA TANDA</div><b id="first">0 fichas registradas</b></div><button class="btn small" onclick="go('catalog')">Ver catálogo</button></div><div style="height:6px;background:#2b3850;border-radius:8px;margin-top:12px"><div id="bar" style="height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--orange));border-radius:8px"></div></div></div>
 <div class="panel"><div class="row"><div><div class="eyebrow">SEGUNDA TANDA</div><b id="second">0 fichas registradas</b></div><button class="btn small secondary" onclick="go('catalog');setTanda('Segunda tanda')">Explorar</button></div></div>
